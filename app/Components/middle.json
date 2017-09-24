@@ -1,0 +1,21 @@
+
+{
+  "data":[
+    {
+      "iconName":"icon_01",
+      "titleName":"代付款"
+    },
+    {
+      "iconName":"icon_02",
+      "titleName":"代使用"
+    },
+    {
+      "iconName":"icon_03",
+      "titleName":"代评价"
+    },
+    {
+      "iconName":"icon_04",
+      "titleName":"退款／售后"
+    }
+  ]
+}
