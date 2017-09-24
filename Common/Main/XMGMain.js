@@ -14,10 +14,10 @@ import {
     Platform
 } from 'react-native';
 /**----导入组件-------*/
-import Mine from './XMGMine';
-import Home from './XMGHome';
-import Find from './XMGFind';
-import Message from './XMGMessage';
+import Mine from './../Mine/XMGMine';
+import Home from './../Home/XMGHome';
+import Find from './../Find/XMGFind';
+import Message from './../Message/XMGMessage';
 import TabNavigator from 'react-native-tab-navigator';
 import {Navigator} from 'react-native-deprecated-custom-components';
 export default class Main extends Component {

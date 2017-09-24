@@ -15,7 +15,7 @@ import {
     Dimensions
 } from 'react-native';
 
-import MiddleData from './middle.json';
+import MiddleData from './../LoacalData/middle.json';
 var width = Dimensions.get('window').width;
 var cell = 4;
 var cellWH = 70;

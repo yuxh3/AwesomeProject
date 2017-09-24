@@ -12,8 +12,8 @@ import {
     View,
     ScrollView
 } from 'react-native';
-import MyCell from './XMGCommonMyCell';
-import MessMiddleView from './XMGMiddleView';
+import MyCell from './../Commons/XMGCommonMyCell';
+import MessMiddleView from './../Home/XMGMiddleView';
 import MessHeadView from './XMGMessHeadView';
 export default class Message extends Component {
     render() {

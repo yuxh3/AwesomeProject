@@ -17,7 +17,7 @@ import {
 
 // var TimerMixin = require('react-timer-mixin');
 var Dimensions = require('Dimensions');
-import ImageData from './app/Components/json.json';
+import ImageData from './Common/LoacalData/json.json';
 var width = Dimensions.get('window').width;
 
 class AwesomeProject extends Component {

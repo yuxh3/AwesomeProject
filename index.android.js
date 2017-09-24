@@ -14,7 +14,7 @@ import {
     Image
 } from 'react-native'
 import {Navigator} from 'react-native-deprecated-custom-components';
-import Lanuch from './app/Components/XMGShop';
+import Lanuch from './Common/Shop/XMGShop';
 
 export default class AwesomeProject extends Component {
     render() {

@@ -12,7 +12,7 @@ import {
     View,
     Image
 } from 'react-native';
-import Main from './XMGMain';
+import Main from './../Main/XMGMain';
 export default class Launch extends Component {
 
     static defaultProps={

@@ -15,8 +15,8 @@ import {
     Dimensions
 } from 'react-native';
 
-import TopMiddleData from "./HomeTopMiddleLeft.json";
-import MiddleCommonView from './XMGMiddleCommonView';
+import TopMiddleData from "./../LoacalData/HomeTopMiddleLeft.json";
+import MiddleCommonView from './../Commons/XMGMiddleCommonView';
 var width = Dimensions.get("window").width;
 export default class HomeMiddleView extends Component {
     render() {

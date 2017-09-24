@@ -11,8 +11,8 @@ import {
     Text,
     View
 } from 'react-native';
-import CommonView from './XMGMiddleCommonView';
-import Home_D4 from './XMG_Home_D4.json';
+import CommonView from './../Commons/XMGMiddleCommonView';
+import Home_D4 from './../LoacalData/XMG_Home_D4.json';
 
 export default class Find extends Component {
 

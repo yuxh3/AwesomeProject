@@ -15,7 +15,7 @@ import {
     Image,
     Dimensions
 } from 'react-native';
-import shareData from './app/Components/json.json';
+import shareData from './Common/LoacalData/json.json';
 var clos = 3;
 var screenWidth = Dimensions.get("window").width;
 var cellWH = 100;

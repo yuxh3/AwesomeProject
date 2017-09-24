@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 
 var width = Dimensions.get('window').width;
-import TopMenu from './TopMenu.json';
+import TopMenu from './../LoacalData/TopMenu.json';
 import TopListView from './XMGTopListView';
 export default class TopView extends Component {
 

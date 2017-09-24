@@ -16,7 +16,7 @@ import {
     ScrollView
 } from 'react-native';
 var width = Dimensions.get("window").width;
-import CommonCell from './XMGCommonCell';
+import CommonCell from './../Commons/XMGCommonCell';
 
 export default class Mine extends Component {
     render() {

@@ -15,7 +15,7 @@ import {
     ListView
 } from 'react-native';
 
-import ShareData from './app/Components/json.json';
+import ShareData from './Common/LoacalData/json.json';
 export default class AwesomeProject extends Component {
 
     // 构造
