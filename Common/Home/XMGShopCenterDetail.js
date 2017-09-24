@@ -12,27 +12,36 @@ import {
     View,
     Image,
     TouchableOpacity,
-    Dimensions
+    Dimensions,
+    WebView
 } from 'react-native';
 var width = Dimensions.get("window").width;
-export default class HomeDetail extends Component {
-
+export default class ShopCenterDetail extends Component {
 
     // 构造
       constructor(props) {
         super(props);
         // 初始状态
         this.state = {
-            data:this.props.data
+            detailUrl:this.props.url+'?uuid=5C7B6342814C7B496D836A69C872202B5DE8DB689A2D777DFC717E10FC0B4271&utm_term=6.' +
+            '6&utm_source=AppStore&utm_content=5C7B6342814C7B496D836A69C872202B5DE8DB689A2D777DFC717E10FC0B4271&version_' +
+            'name=6.6&userid=160495643&utm_medium=iphone&lat=23.134709&utm_campaign=AgroupBgroupD100Ghomepage_shoppingma' +
+            'll_detailH0&token=b81UqRVf6pTL4UPLLBU7onkvyQoAAAAAAQIAACQVmmlv_Qf_xR-hBJVMtIlq7nYgStcvRiK_CHFmZ5Gf70DR47KP2' +
+            'VSP1Fu5Fc1ndA&lng=113.373890&f=iphone&ci=20&msid=0FA91DDF-BF5B-4DA2-B05D-FA2032F30C6C2016-04-04-08-38594'
         };
       }
     render() {
         return (
             <View style={styles.container}>
                 {this.renderNavBar()}
-                <View style={styles.textStyle}>
-                    <Text >{this.props.title}</Text>
-                </View>
+                <WebView
+                    automaticallyAdjustContentInsets={true}
+                    source={{uri: this.state.detailUrl}}
+                    javaScriptEnabled={true}
+                    domStorageEnabled={true}
+                    decelerationRate="normal"
+                    startInLoadingState={true}
+                />
             </View>
         );
     }
@@ -64,16 +73,10 @@ const styles = StyleSheet.create({
     container: {
         flex:1,
     },
-    textStyle:{
-        flex:1,
-        backgroundColor:'#797990',
-        alignItems:'center',
-        justifyContent:'center'
-    },
     navBarStyle:{
         width:width,
         height:64,
-        backgroundColor:'rgba(255,96,0,1.0)',
+        backgroundColor:'#F0F8FF',
         flexDirection:'row',
         alignItems:'center',
         justifyContent:'space-around'
@@ -97,6 +100,7 @@ const styles = StyleSheet.create({
         width:30,
         height:30
     }
+
 });
 
-module.exports = HomeDetail;
+module.exports = ShopCenterDetail;

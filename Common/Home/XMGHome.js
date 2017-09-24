@@ -23,6 +23,8 @@ import HomeDetail from './XMGHomeDetail';
 import TopView from './XMGTopView';
 import MiddleView from './XMGHomeMiddleView';
 import MiddleBottomView from './XMGMiddleBottomView';
+import ShopCenter from './XMGHomeShopCenter';
+import ShopCenterDetail from './XMGShopCenterDetail';
 export default class Home extends Component {
 
     render() {
@@ -37,7 +39,9 @@ export default class Home extends Component {
                     <MiddleBottomView
                         popTopHome={(data)=>this.pushToDetail(data)}
                     />
-                    
+                    <ShopCenter
+                        popToHomeView={(url)=>this.pushToShopCenterDetail(url)}
+                    />
                 </ScrollView>
             </View>
         );
@@ -46,13 +50,25 @@ export default class Home extends Component {
         this.props.navigator.push({
                 component: HomeDetail,
                 title:"详页",
-                passProps:{
+                passProps:{//这个传递参数
                     title:"详情界面",
                     data:data
         }
 
             })}
+    pushToShopCenterDetail(url){
+        this.props.navigator.push({
+            component:ShopCenterDetail,
+            passProps:{
+                url:this.dealWithUrl(url),
+                title:'购物中心'
+            }
+        })
+    }
 
+    dealWithUrl(url){
+        return url.replace('imeituan://www.meituan.com/web/?url=', '')
+    }
     // 首页的导航条
     renderNarBar(){
         return(
