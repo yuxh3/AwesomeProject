@@ -25,6 +25,7 @@ import MiddleView from './XMGHomeMiddleView';
 import MiddleBottomView from './XMGMiddleBottomView';
 import ShopCenter from './XMGHomeShopCenter';
 import ShopCenterDetail from './XMGShopCenterDetail';
+import GeustYouLike from './XMGHomeGeustYouLike';
 export default class Home extends Component {
 
     render() {
@@ -42,6 +43,10 @@ export default class Home extends Component {
                     <ShopCenter
                         popToHomeView={(url)=>this.pushToShopCenterDetail(url)}
                     />
+
+                    <GeustYouLike
+                    />
+
                 </ScrollView>
             </View>
         );
