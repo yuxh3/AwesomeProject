@@ -28,7 +28,7 @@ export default class GeustYouLike extends Component {
         '689A2D777DFC717E10FC0B4271&utm_source=AppStore&utm_medium=iphone&version_name=6.6&wifi-cur=0&wifi-strength=&off' +
         'set=0&utm_campaign=AgroupBgroupD100H0&__skck=3c0cf64e4b039997339ed8fec4cddf05&msid=0FA91DDF-BF5B-4DA2-B05D-FA20' +
         '32F30C6C2016-04-04-08-38594'
-    }
+    };
 
     // 构造
       constructor(props) {
@@ -38,7 +38,8 @@ export default class GeustYouLike extends Component {
             dataSource: new ListView.DataSource({rowHasChanged:(r1,r2)=> r1 !== r2})
         };
         this.loadDataFormNet = this.loadDataFormNet.bind(this);
-      }
+      };
+
     render() {
         return (
             <View style={styles.container}>
@@ -52,13 +53,14 @@ export default class GeustYouLike extends Component {
                 />
             </View>
         );
-    }
+    };
 
     renderRow(rowData){
         return(
             <TouchableOpacity onPress={()=>alert(0)}>
                  <View style={styles.listViewStyle}>
-                     <Image source={{uri:this.dealWithImgUrl(rowData.imageUrl)}} style={styles.imageViewStyle}/>
+                     <Image source={{uri:rowData.imageUrl}} style={styles.imageViewStyle}/>
+
                      <View style={styles.rightViewStyle}>
                          <View style={styles.rightTopViewStyle}>
                              <Text>{rowData.title}</Text>
@@ -73,19 +75,20 @@ export default class GeustYouLike extends Component {
                  </View>
             </TouchableOpacity>
         )
-    }
+    };
     //处理数据的宽高
-    dealWithImgUrl(url){
+    deal(url){
+        alert(0);
         if (url.search('w.h') == -1){
             return url;
         }else {
             return url.replace('w.h','120.90');
         }
-    }
+    };
     //请求网络
     componentDidMount() {
         this.loadDataFormNet();
-    }
+    };
     //加载数据
     loadDataFormNet(){
         fetch(this.props.api_url)
@@ -98,11 +101,10 @@ export default class GeustYouLike extends Component {
             .catch((error)=>{
                 // 更新数据源
                 this.setState({
-                    dataSource: this.state.dataSource.cloneWithRows(youLikeData.data)
+                    dataSource:this.state.dataSource.cloneWithRows(youLikeData.data)
                 });
             })
-
-    }
+    };
 }
 
 const styles = StyleSheet.create({
@@ -114,7 +116,8 @@ const styles = StyleSheet.create({
         alignItems:'center',
         padding:10,
         borderBottomColor:'#e8e8e8',
-        borderBottomWidth:0.5
+        borderBottomWidth:0.5,
+        backgroundColor:'#fff'
     },
     imageViewStyle:{
         width:120,
